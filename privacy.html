@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy policy | PD on Demand</title>
+<meta name="description" content="How PD on Demand processes personal data, on this website and within our assessment services.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://www.pd-ondemand.ch/en/privacy">
+<link rel="alternate" hreflang="de" href="https://www.pd-ondemand.ch/datenschutz">
+<link rel="alternate" hreflang="en" href="https://www.pd-ondemand.ch/en/privacy">
+<style>
+:root{
+  --ink:#132623;--ink2:#1B332F;--slate:#4C5A56;--muted:#7C8A85;
+  --line:#DDE1DC;--sand:#F1F3EF;--white:#fff;
+  --amber:#17403F;--teal:#17403F;--plum:#2F5B52;--wa:#25D366;
+  --fd:Arial,Helvetica,sans-serif;--fb:Arial,Helvetica,sans-serif;--fm:Arial,Helvetica,sans-serif;
+  --max:1140px;--gut:clamp(20px,5vw,72px);--e:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--fb);font-size:17px;line-height:1.65;color:var(--slate);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font-family:inherit;font-size:inherit}
+button{border:none;background:none;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:200;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(228,224,216,.7)}
+.nv{display:flex;align-items:center;gap:24px;height:68px;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.lmark{width:34px;height:34px;flex-shrink:0}
+.ltext{font-family:var(--fd);font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.3px;white-space:nowrap}
+.ltext i{font-style:normal;font-weight:400;color:var(--amber)}
+.nlinks{display:flex;gap:26px;margin-left:auto}
+.nlinks a{font-size:14.5px;font-weight:600;color:var(--slate);transition:color .2s}
+.nlinks a:hover{color:var(--amber)}
+.lang{display:flex;gap:2px;font-family:var(--fm);font-size:12px;font-weight:500;color:var(--muted);align-items:center}
+.lang a{padding:6px 7px;border-radius:5px;transition:all .2s}
+.lang a[aria-current="true"]{color:var(--ink);background:var(--sand)}
+.lang a:hover{color:var(--amber)}
+.nbtn{display:inline-flex;align-items:center;height:42px;padding:0 20px;background:var(--ink);color:#fff;border-radius:21px;font-size:14px;font-weight:700;transition:transform .2s var(--e),background .2s;white-space:nowrap}
+.nbtn:hover{background:var(--amber);transform:translateY(-2px)}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;margin-left:auto}
+.burger span{display:block;width:20px;height:1.5px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0;width:20px;height:1.5px;background:var(--ink)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.mob{display:none;position:fixed;inset:68px 0 auto;z-index:199;background:#fff;border-bottom:1px solid var(--line);padding:16px var(--gut) 24px}
+.mob.on{display:block}
+.mob a{display:block;padding:13px 0;font-size:16px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line)}
+
+/* HERO */
+.hero{padding:148px 0 clamp(60px,8vw,108px);background:var(--sand)}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,72px);align-items:center;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:11.5px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--amber)}
+h1{font-family:var(--fd);font-size:clamp(36px,5.4vw,62px);font-weight:500;line-height:1.05;color:var(--ink);letter-spacing:-1.4px;margin-bottom:26px}
+h1 i{font-style:italic;font-weight:400;color:var(--amber)}
+.hsub{font-size:clamp(16px,1.7vw,18.5px);line-height:1.7;color:var(--slate);max-width:520px;margin-bottom:34px}
+.hact{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;border-radius:26px;font-size:15px;font-weight:700;transition:transform .2s var(--e),box-shadow .25s,background .2s,border-color .2s}
+.btn-p{background:var(--ink);color:#fff}
+.btn-p:hover{background:var(--amber);transform:translateY(-2px);box-shadow:0 10px 28px rgba(196,137,74,.32)}
+.btn-a{background:var(--amber);color:#fff}
+.btn-a:hover{background:#a9743a;transform:translateY(-2px);box-shadow:0 10px 28px rgba(196,137,74,.32)}
+.btn-w{background:var(--wa);color:#0A2E17}
+.btn-w:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.34)}
+.btn-o{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+.btn-o:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-sm{height:42px;padding:0 18px;font-size:13.5px;border-radius:21px}
+
+/* PROFILE CARD */
+.pcard{background:#fff;border-radius:20px;padding:clamp(24px,3vw,34px);box-shadow:0 1px 2px rgba(20,20,40,.04),0 18px 50px rgba(20,20,40,.09)}
+.pc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pc-t{font-family:var(--fm);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+.pc-live{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)}
+.pc-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.pc-name{font-family:var(--fd);font-size:19px;font-weight:600;color:var(--ink);margin:10px 0 22px}
+.bar-row{margin-bottom:17px}
+.bar-lab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px}
+.bar-lab b{font-size:13.5px;font-weight:600;color:var(--ink)}
+.bar-lab span{font-family:var(--fm);font-size:11px;color:var(--muted);white-space:nowrap}
+.bar-tr{height:7px;background:var(--sand);border-radius:4px;overflow:hidden}
+.bar-fl{height:100%;border-radius:4px;width:0;transition:width 1.4s var(--e)}
+.pc-note{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.6;color:var(--muted)}
+.pc-note b{color:var(--ink);font-weight:700}
+
+/* HEADS */
+.shead{max-width:680px}
+h2{font-family:var(--fd);font-size:clamp(27px,3.7vw,42px);font-weight:500;line-height:1.16;color:var(--ink);letter-spacing:-.9px;margin-bottom:20px}
+h3{font-family:var(--fd);font-weight:600;color:var(--ink)}
+.slead{font-size:17.5px;line-height:1.72;color:var(--slate)}
+.dark h2{color:#fff}.dark .slead{color:rgba(255,255,255,.62)}
+
+/* PROBLEM */
+.problem{background:#fff}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.pain{padding:26px 0;border-bottom:1px solid var(--line)}
+.pain:first-child{border-top:1px solid var(--line)}
+.pain-h{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px}
+.pain-t{font-family:var(--fm);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);padding:4px 9px;border:1px solid var(--line);border-radius:20px;white-space:nowrap;flex-shrink:0}
+.pain q{display:block;font-family:var(--fd);font-size:18px;font-weight:500;font-style:italic;color:var(--ink);quotes:none;line-height:1.4}
+.pain p{font-size:15px;line-height:1.65;color:var(--slate);padding-left:0}
+.pain p b{color:var(--teal);font-weight:700}
+
+/* FINDER */
+.finder{background:var(--ink);color:#fff}
+.fd-box{margin-top:44px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:22px;padding:clamp(26px,3.4vw,42px)}
+.fd-q{font-family:var(--fm);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.fd-opts{display:flex;flex-wrap:wrap;gap:11px}
+.chip{padding:12px 20px;min-height:44px;border:1.5px solid rgba(255,255,255,.18);border-radius:24px;font-size:14.5px;font-weight:600;color:rgba(255,255,255,.8);transition:all .22s var(--e)}
+.chip:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#fff}
+.fd-out{margin-top:30px;padding-top:28px;border-top:1px solid rgba(255,255,255,.11);display:none}
+.fd-out.on{display:block;animation:rise .5s var(--e)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fd-badge{display:inline-block;font-family:var(--fm);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.fd-title{font-family:var(--fd);font-size:clamp(22px,2.6vw,30px);font-weight:500;color:#fff;margin-bottom:14px;line-height:1.22}
+.fd-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,.66);max-width:560px;margin-bottom:22px}
+.fd-meta{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:26px}
+.fd-m b{display:block;font-family:var(--fm);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:5px;font-weight:500}
+.fd-m span{font-family:var(--fd);font-size:19px;font-weight:600;color:#fff}
+
+/* JOURNEY */
+.journey{background:var(--sand)}
+.jtabs{display:flex;gap:9px;flex-wrap:wrap;margin-top:36px}
+.jtab{padding:11px 19px;min-height:44px;border:1.5px solid var(--line);border-radius:22px;font-size:14px;font-weight:700;color:var(--slate);background:#fff;transition:all .22s var(--e)}
+.jtab:hover{border-color:var(--ink);color:var(--ink)}
+.jtab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.jsteps{margin-top:44px;position:relative;padding-left:clamp(28px,4vw,44px)}
+.jline{position:absolute;left:5px;top:14px;bottom:14px;width:2px;background:var(--line);border-radius:2px}
+.jline::after{content:'';position:absolute;inset:0 0 auto;height:var(--prog,0%);background:var(--amber);border-radius:2px;transition:height .55s var(--e)}
+.jstep{position:relative;padding:0 0 34px;opacity:.34;transition:opacity .5s var(--e)}
+.jstep:last-child{padding-bottom:0}
+.jstep.on{opacity:1}
+.jstep::before{content:'';position:absolute;left:calc(-1*clamp(28px,4vw,44px) + 1px);top:7px;width:12px;height:12px;border-radius:50%;background:var(--sand);border:2px solid var(--line);transition:all .5s var(--e)}
+.jstep.on::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 5px rgba(196,137,74,.15)}
+.jstep em{font-family:var(--fm);font-style:normal;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px}
+.jstep h4{font-family:var(--fd);font-size:19px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.jstep p{font-size:15.5px;line-height:1.65;color:var(--slate);max-width:520px}
+
+/* PRODUCTS */
+.products{background:#fff}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.prod{border:1px solid var(--line);border-radius:20px;padding:clamp(26px,2.6vw,34px);display:flex;flex-direction:column;transition:transform .28s var(--e),box-shadow .28s,border-color .28s;position:relative;overflow:hidden}
+.prod:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(20,20,40,.1);border-color:transparent}
+.prod::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--e)}
+.prod:hover::before{transform:scaleX(1)}
+.pnum{font-family:var(--fm);font-size:10.5px;letter-spacing:1.4px;color:var(--accent);text-transform:uppercase}
+.prod h3{font-size:22px;margin:14px 0 12px;line-height:1.25}
+.prod>p{font-size:15px;line-height:1.65;color:var(--slate);flex:1;margin-bottom:22px}
+.pprice{padding-top:18px;border-top:1px solid var(--line);font-family:var(--fd);font-size:17px;font-weight:600;color:var(--ink);margin-bottom:18px}
+.pprice small{display:block;font-family:var(--fb);font-size:12.5px;font-weight:400;color:var(--muted);margin-top:3px}
+
+/* REVIEWS */
+.reviews{background:var(--sand)}
+.rv-top{display:flex;align-items:center;gap:clamp(20px,4vw,48px);flex-wrap:wrap;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:32px}
+.rv-score{display:flex;align-items:baseline;gap:10px}
+.rv-num{font-family:var(--fd);font-size:clamp(40px,6vw,60px);font-weight:600;color:var(--ink);line-height:1;letter-spacing:-2px}
+.rv-of{font-size:14px;color:var(--muted)}
+.rv-meta{font-size:14.5px;line-height:1.55;color:var(--slate);max-width:320px}
+.rv-meta b{color:var(--ink)}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.rv{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--line);display:flex;flex-direction:column}
+.rv-h{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.rv-lg{width:38px;height:38px;border-radius:9px;background:var(--sand);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:14px;font-weight:600;color:var(--ink);flex-shrink:0}
+.rv-co{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.3}
+.rv-tag{font-family:var(--fm);font-size:10px;letter-spacing:.9px;text-transform:uppercase;color:var(--muted)}
+.rv q{display:block;font-size:15px;line-height:1.68;color:var(--slate);quotes:none;flex:1}
+.rv-who{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.rv-more{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.rv-more span{font-family:var(--fm);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}
+.rv-pill{padding:7px 14px;background:#fff;border:1px solid var(--line);border-radius:18px;font-size:13px;font-weight:600;color:var(--slate)}
+
+/* PARTNERS */
+.partners{background:#fff}
+.pt-lab{font-family:var(--fm);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin:44px 0 18px}
+.pt-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pt3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pt{border:1px solid var(--line);border-radius:18px;padding:28px;transition:border-color .25s,transform .25s var(--e);display:block}
+.pt:hover{border-color:var(--amber);transform:translateY(-3px)}
+.pt b{display:flex;align-items:center;gap:8px;font-family:var(--fd);font-size:19px;font-weight:600;color:var(--ink);margin-bottom:9px}
+.pt b::after{content:'↗';font-family:var(--fb);font-size:14px;color:var(--amber);font-weight:400}
+.pt p{font-size:14.5px;line-height:1.62;color:var(--slate)}
+
+/* AI */
+.ai{background:var(--ink);color:#fff}
+.ai-in{max-width:680px}
+.ai-in p{font-size:17px;line-height:1.76;margin-bottom:16px;color:rgba(255,255,255,.68)}
+.ai-in p:last-child{font-family:var(--fd);font-size:21px;font-weight:600;color:#fff;margin:0}
+
+/* FAQ */
+.faq{background:var(--sand)}
+.acc{margin-top:44px;border-top:1px solid var(--line)}
+.acc-i{border-bottom:1px solid var(--line)}
+.acc-b{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 0;text-align:left;font-family:var(--fd);font-size:18px;font-weight:600;color:var(--ink);transition:color .2s;min-height:44px}
+.acc-b:hover{color:var(--amber)}
+.acc-ic{width:30px;height:30px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:19px;line-height:1;color:var(--muted);transition:all .3s var(--e)}
+.acc-b[aria-expanded="true"] .acc-ic{transform:rotate(45deg);border-color:var(--amber);color:var(--amber)}
+.acc-p{max-height:0;overflow:hidden;transition:max-height .45s var(--e)}
+.acc-p div{padding:0 0 26px;max-width:680px;font-size:16px;line-height:1.72;color:var(--slate)}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#fff}
+.cg{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(36px,6vw,72px);align-items:start}
+.cg h2{color:#fff}
+.cg .slead{color:rgba(255,255,255,.64)}
+.c-alt{margin-top:32px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+.c-alt b{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;font-weight:500}
+.c-alt .hact{gap:11px}
+form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,34px)}
+.f-row{margin-bottom:18px}
+.f-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13.5px;font-weight:700;color:rgba(255,255,255,.82);margin-bottom:7px}
+input,textarea,select{width:100%;padding:13px 15px;min-height:48px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:11px;color:#fff;transition:border-color .2s,background .2s}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23ffffff' stroke-opacity='.5' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
+select option{background:var(--ink);color:#fff}
+textarea{resize:vertical;min-height:110px}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.34)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--amber);background:rgba(255,255,255,.1)}
+.f-note{font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.42);margin-top:14px}
+.f-note a{text-decoration:underline;text-underline-offset:2px}
+.f-ck{display:flex;gap:11px;align-items:flex-start;margin-bottom:20px}
+.f-ck input{width:20px;height:20px;min-height:20px;margin-top:2px;flex-shrink:0;accent-color:var(--amber)}
+.f-ck label{font-size:13px;font-weight:400;color:rgba(255,255,255,.62);margin:0;line-height:1.55}
+
+/* FOOTER */
+footer{background:var(--ink2);padding:52px 0 30px;border-top:1px solid rgba(255,255,255,.07)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.fcol b{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;font-weight:500}
+.fcol a,.fcol p{display:block;font-size:14.5px;color:rgba(255,255,255,.62);margin-bottom:10px;transition:color .2s}
+.fcol a:hover{color:var(--amber)}
+.fbot{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:rgba(255,255,255,.32)}
+.fbot a:hover{color:var(--amber)}
+
+/* FAB */
+.fab{position:fixed;right:20px;bottom:20px;z-index:190;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.4);transition:transform .25s var(--e)}
+.fab:hover{transform:scale(1.08)}
+
+@media(max-width:900px){
+  .hg,.pgrid,.pcards,.rv-grid,.pt-grid,.pt3,.cg,.f-row2{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .nlinks,.nbtn{display:none}
+  .burger{display:flex}
+  .lang{margin-left:auto}
+  .hero{padding-top:118px}
+}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}.jstep{opacity:1}}
+</style>
+<style>
+.legal{padding:150px 0 90px;background:var(--sand)}
+.legal .wrap{max-width:780px}
+.legal h1{font-family:var(--fd);font-size:clamp(34px,4.6vw,52px);font-weight:500;letter-spacing:-.02em;line-height:1.08;color:var(--ink);margin-bottom:14px}
+.legal .stamp{font-family:var(--fm);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:22px;display:block}
+.legal h2{font-family:var(--fd);font-size:clamp(21px,2.3vw,26px);font-weight:500;color:var(--ink);margin:52px 0 14px;letter-spacing:-.01em}
+.legal h3{font-family:var(--fb);font-size:16px;font-weight:700;color:var(--ink);margin:26px 0 8px}
+.legal p,.legal li{font-size:16px;line-height:1.72;color:var(--slate);margin-bottom:14px}
+.legal ul{padding-left:20px;margin-bottom:14px}
+.legal a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.legal a:hover{color:var(--amber)}
+.legal .box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin:20px 0}
+.legal .box p:last-child{margin-bottom:0}
+.legal .note{font-size:14px;color:var(--muted);border-left:2px solid var(--amber);padding-left:16px;margin:20px 0}
+.legal .toc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 28px;margin:30px 0 10px}
+.legal .toc b{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:500}
+.legal .toc a{display:block;padding:5px 0;font-size:15px;text-decoration:none;color:var(--slate)}
+.legal .toc a:hover{color:var(--amber)}
+.back{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:30px}
+.back:hover{color:var(--amber)}
+</style>
+
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <div class="nv">
+    <a href="index-en.html" class="logo" aria-label="PD on Demand, back to home">
+      <svg class="lmark" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" stroke="#132623" stroke-width="1.6"/><circle cx="17" cy="17" r="5.5" fill="#17403F"/><path d="M17 1v9M17 24v9" stroke="#132623" stroke-width="1.6"/></svg>
+      <span class="ltext">PD <i>on Demand</i></span>
+    </a>
+    <div class="nlinks"><a href="index-en.html#leistungen">Services</a><a href="index-en.html#ablauf">Process</a><a href="index-en.html#faq">FAQ</a><a href="index-en.html#kontakt">Contact</a></div>
+    <div class="lang"><a href="datenschutz.html">DE</a><a href="privacy.html" aria-current="true">EN</a></div>
+    <a href="index-en.html#kontakt" class="nbtn">Book an intro call</a>
+  </div>
+</nav>
+<main class="legal">
+  <div class="wrap">
+    <a href="index-en.html" class="back">Back to home</a>
+    <span class="stamp">Last updated: August 2026</span>
+    <h1>Privacy policy</h1>
+    <p class="note">This is a translation for convenience. In case of any discrepancy, the German version prevails.</p>
+    <p>This policy describes which personal data we process, for what purpose and on what legal basis. It covers visits to this website and the delivery of our assessment services.</p>
+
+    <div class="toc">
+      <b>Contents</b>
+      <a href="#s1">1. Overview</a>
+      <a href="#s2">2. Controller</a>
+      <a href="#s3">3. Applicable law and our Swiss location</a>
+      <a href="#s4">4. Your rights</a>
+      <a href="#s5">5. Visiting this website</a>
+      <a href="#s6">6. Contact form</a>
+      <a href="#s7">7. Scheduling via Calendly</a>
+      <a href="#s8">8. Contact via WhatsApp</a>
+      <a href="#s9">9. Processing within our services</a>
+      <a href="#s10">10. Sharing with third parties</a>
+      <a href="#s11">11. Changes</a>
+    </div>
+
+    <h2 id="s1">1. Overview</h2>
+    <p>We keep data processing deliberately lean. This website uses no analytics cookies, no advertising tracking and no social media plugins. The website does not load fonts from third parties.</p>
+
+    <h2 id="s2">2. Controller</h2>
+    <div class="box">
+      <p><b>PD on Demand GmbH</b><br>Grabenstrasse 15a<br>6340 Baar<br>Switzerland</p>
+      <p>Represented by: Lukas B. von Lindern<br>
+      Email: <a href="mailto:info@pd-ondemand.ch">info@pd-ondemand.ch</a><br>
+      Phone: <a href="tel:+41797052727">+41 79 705 27 27</a></p>
+    </div>
+    <p>The controller is the natural or legal person that decides on the purposes and means of processing personal data.</p>
+
+    <h2 id="s3">3. Applicable law and our Swiss location</h2>
+    <p>We are based in Switzerland, so the Swiss Federal Act on Data Protection applies. Because we offer our services specifically to companies and individuals in the European Economic Area, the GDPR also applies under Art. 3(2) GDPR. We follow whichever standard is stricter.</p>
+    <p>The European Commission has issued an adequacy decision for Switzerland. Transfers of personal data to Switzerland are therefore permitted without additional safeguards.</p>
+    
+    <h2 id="s4">4. Your rights</h2>
+    <p>You have the right to access the data we hold about you, to have inaccurate data corrected, to erasure, to restriction of processing, to data portability and to object to processing based on legitimate interests. You can withdraw consent at any time with effect for the future. Processing carried out before the withdrawal remains lawful.</p>
+    <p>An informal message to <a href="mailto:info@pd-ondemand.ch">info@pd-ondemand.ch</a> is enough for any of these requests.</p>
+    <p>If you believe we are processing your data unlawfully, you can lodge a complaint with a supervisory authority. In Switzerland this is the Federal Data Protection and Information Commissioner. In the EEA, the competent authority is the one in your place of residence, your place of work or the place of the alleged infringement.</p>
+
+    <h2 id="s5">5. Visiting this website</h2>
+    <h3>Server log files</h3>
+    <p>When you open the website, your browser transmits technical data that our host stores in log files. This includes your IP address, the date and time of access, the page requested, the volume of data transferred, the browser type and the operating system.</p>
+    <ul>
+      <li>Purpose: technical operation, stability and security of the website</li>
+      <li>Legal basis: Art. 6(1)(f) GDPR, legitimate interest in secure and reliable operation</li>
+      <li>Retention: 90 days, then automatic deletion</li>
+    </ul>
+    <h3>Hosting</h3>
+    <p><b>Hosting provider:</b> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages). <b>Server location:</b> GitHub operates a global infrastructure; GitHub states that GitHub.com data is stored by default in the USA and that processing may also take place in other countries. When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes. Further information: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener">GitHub Pages documentation</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+    <h3>Encryption</h3>
+    <p>This website is served exclusively over HTTPS. Your entries are encrypted in transit.</p>
+    <h3>Fonts</h3>
+    <p>The website uses system fonts and does not load web fonts from third parties. There is therefore no connection to third-party font servers.</p>
+
+    <h2 id="s6">6. Contact form</h2>
+    <p>If you use the contact form, we process the details you enter in order to handle your enquiry and any follow-up questions.</p>
+    <ul>
+      <li>Data collected: name, company, email address, optionally phone number, topic and message</li>
+      <li>Purpose: handling your enquiry</li>
+      <li>Legal basis: Art. 6(1)(b) GDPR where the enquiry relates to a contract or pre-contractual steps. Otherwise Art. 6(1)(f) GDPR, legitimate interest in responding to enquiries</li>
+      <li>Retention: until the enquiry is fully handled, then deletion. Statutory retention periods remain unaffected</li>
+    </ul>
+    <p><b>Form service provider:</b> Formspree, Inc., Austin, Texas, USA (publicly stated company location; Formspree does not publish a complete street address in its official privacy and legal information). <b>Server location:</b> United States; Formspree states that its services are hosted with Amazon Web Services in the United States and that data may also be processed in other countries. Formspree states that it relies on Standard Contractual Clauses for international transfers. Further information: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree Privacy Policy</a> and <a href="https://formspree.io/security/" target="_blank" rel="noopener">Formspree Security</a>.</p>
+
+    <h2 id="s7">7. Scheduling via Calendly</h2>
+    <p>We use Calendly to arrange introductory calls. The provider is Calendly LLC, 271 17th St NW, Atlanta, GA 30363, USA.</p>
+    <p>When you book a slot, Calendly processes the details you provide, in particular your name, email address, chosen time and time zone, and any notes about your enquiry. Data is transferred to the USA in the process.</p>
+    <ul>
+      <li>Purpose: arranging and managing appointments</li>
+      <li>Legal basis: Art. 6(1)(b) GDPR for pre-contractual steps. Where cookies are set or information is stored on your device, additionally Art. 6(1)(a) GDPR and Section 25(1) TDDDG</li>
+      <li>Basis for the transfer to the USA: European Commission standard contractual clauses</li>
+    </ul>
+    <p>You can always skip the booking tool and simply email us instead.</p>
+
+    <h2 id="s8">8. Contact via WhatsApp</h2>
+    <p>We offer contact via WhatsApp. The provider is WhatsApp Ireland Limited, Merrion Road, Dublin 4, Ireland, part of the Meta group.</p>
+    <p>If you message us on WhatsApp, we process your phone number, your profile name and the content of your messages. Meta additionally processes metadata such as the time and frequency of communication. We have no influence over that processing. A transfer to the USA takes place.</p>
+    <ul>
+      <li>Purpose: fast and straightforward communication at your request</li>
+      <li>Legal basis: Art. 6(1)(a) GDPR. You give consent by actively contacting us on WhatsApp</li>
+      <li>Retention: we delete chat histories once the matter is settled, at the latest after 90 days</li>
+    </ul>
+    <p class="note">Please note: do not send confidential content via WhatsApp, in particular no assessment results, no information about individual employees and no candidate data. For anything involving personal data, please use email or our protected channels. If you prefer not to use WhatsApp, email, phone and the contact form work just as well.</p>
+
+    <h2 id="s9">9. Processing within our services</h2>
+    <p>This section is not about visiting the website. It covers assessments, debriefings and development programmes, and it is the most important part of this policy for us.</p>
+    <h3>What we process</h3>
+    <p>Basic details of the participant such as name, email address, role and organisation. The answers given in the questionnaire of the respective instrument. The resulting analyses and reports. Notes from the debriefing, where needed for the development plan. The development plan itself.</p>
+    <h3>Roles</h3>
+    <p>In most cases a company commissions us to carry out the work. The division of responsibility between the company and us is agreed in writing before the project starts, including a processing agreement under Art. 28 GDPR or, where applicable, a joint controllership arrangement under Art. 26 GDPR. We tell each participant which arrangement applies before they begin.</p>
+    <h3>Legal basis</h3>
+    <p>Participation in an assessment is based on the voluntary consent of the participant under Art. 6(1)(a) GDPR. We obtain this consent before the assessment starts and it can be withdrawn at any time. In a selection context, Art. 6(1)(b) GDPR may also apply where processing is necessary for the decision on an application. Section 26 BDSG in Germany and equivalent national provisions apply in addition.</p>
+    <h3>Who owns the results</h3>
+    <p>The person assessed always receives the full report first. In the debriefing they learn what the results say and what they do not say. What is passed on to the commissioning company is defined transparently in advance and communicated to the participant before they begin.</p>
+    <h3>Profiling and automated decisions</h3>
+    <p>Psychometric instruments create profiles within the meaning of Art. 4(4) GDPR. However, we make no automated decisions within the meaning of Art. 22 GDPR. A test result never leads to a decision about a person on its own, without human judgement. Every result is interpreted by a certified professional and discussed in conversation. In selection processes we give an assessment, and the commissioning company makes the decision.</p>
+    <h3>Instrument providers</h3>
+    <p>We use the platforms of the respective instrument providers. Depending on the assignment these are Harrison Assessments, PI Company or Hogan Assessments. We state which provider is used before the work begins. Data processing agreements are in place with the providers we use. Where processing takes place outside Switzerland or the EEA, we rely on standard contractual clauses.</p>
+    <h3>Freelance associates</h3>
+    <p>Debriefings may be delivered by certified coaches and psychologists working with us. They are contractually bound to confidentiality and to our data protection requirements, and they only receive the data they need for the conversation in question.</p>
+    <h3>Retention</h3>
+    <p>We keep assessment results and reports for 90 days after the assignment ends, so that follow-up conversations and comparisons over time remain possible. After that we delete them. We delete them earlier on request. Debriefing notes are deleted after 90 days.</p>
+
+    <h2 id="s10">10. Sharing with third parties</h2>
+    <p>We do not sell data and we do not pass it on for advertising. Data is only shared with the processors named in this policy, with the commissioning company within the scope agreed in advance, and where we are legally required to do so.</p>
+
+    <h2 id="s11">11. Changes</h2>
+    <p>We update this policy when our services, our technology or the legal situation change. The version published on this page is the one that applies.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fbot" style="border-top:none;margin-top:0;padding-top:0">
+      <span>2026 PD on Demand GmbH</span>
+      <span style="display:flex;gap:22px;flex-wrap:wrap"><a href="privacy.html">Privacy policy</a><a href="legal-notice.html">Legal notice</a><a href="index-en.html#kontakt">Contact</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
