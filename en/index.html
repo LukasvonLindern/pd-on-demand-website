@@ -561,6 +561,15 @@ h2 i{font-style:italic;font-weight:800;color:var(--cobalt)}
 /* Zitatzeichen ueber dem Text statt darauf */
 .rv q::before{content:'';display:block;width:30px;height:23px;margin:4px 0 16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 26'%3E%3Cpath fill='%230A47C2' d='M0 26V15C0 6.7 4.6 1.6 13 0l1.6 3.6C9.9 5.2 7.6 8 7.3 12H13v14H0zm19 0V15c0-8.3 4.6-13.4 13-15l1.6 3.6C28.9 5.2 26.6 8 26.3 12H32v14H19z'/%3E%3C/svg%3E") left top/contain no-repeat;font-size:0;line-height:0}
 </style>
+<style id="form-fix">
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.fmsg{margin-top:14px;padding:12px 14px;border-radius:6px;font-size:14.5px;line-height:1.5}
+.fmsg.ok{background:rgba(251,248,239,.14);color:var(--cream);border:1px solid rgba(251,248,239,.35)}
+.fmsg.err{background:var(--rust-l);color:var(--rust-d)}
+#cf [aria-invalid="true"]{border-color:var(--rust-l)!important;box-shadow:0 0 0 2px rgba(248,220,203,.55)!important}
+#cf input[type=checkbox][aria-invalid="true"]{outline:2px solid var(--rust-l);outline-offset:2px}
+#cfb[disabled]{opacity:.65;cursor:wait}
+</style>
 </head>
 <body>
 
@@ -852,6 +861,8 @@ h2 i{font-style:italic;font-weight:800;color:var(--cobalt)}
       </div>
 
       <form id="cf" action="https://formspree.io/f/xqpzovjg" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New enquiry via pd-ondemand.ch (EN)">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="f-row2">
           <div class="f-row"><label for="n">Name</label><input id="n" name="name" type="text" placeholder="Vor- und Nachname" required></div>
           <div class="f-row"><label for="c">Company</label><input id="c" name="company" type="text" placeholder="Company" required></div>
@@ -996,7 +1007,14 @@ document.querySelectorAll('.acc-b').forEach(function(b){b.addEventListener('clic
 document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
   var sel=document.getElementById('s');
   for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===c.textContent.trim())sel.selectedIndex=i;}});});
-document.getElementById('cf').addEventListener('submit',function(ev){ev.preventDefault();});
+(function(){var f=document.getElementById('cf'),b=document.getElementById('cfb'),msg=document.getElementById('cfmsg');if(!f)return;var bl=b.textContent;
+function show(t,k){msg.textContent=t;msg.className='fmsg '+k;msg.hidden=false;}
+f.querySelectorAll('input,select,textarea').forEach(function(el){el.addEventListener('input',function(){el.removeAttribute('aria-invalid');});el.addEventListener('change',function(){el.removeAttribute('aria-invalid');});});
+f.addEventListener('submit',function(ev){ev.preventDefault();var bad=[],mailBad=false;
+f.querySelectorAll('[required]').forEach(function(el){var ok=el.type==='checkbox'?el.checked:el.value.trim()!=='';if(ok&&el.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim())){ok=false;mailBad=true;}if(ok)el.removeAttribute('aria-invalid');else{el.setAttribute('aria-invalid','true');bad.push(el);}});
+if(bad.length){show(mailBad&&bad.length===1?'Please enter a valid email address.':'Please fill in the highlighted fields.','err');bad[0].focus();return;}
+b.disabled=true;b.textContent='Sending …';msg.hidden=true;
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.json().catch(function(){return {};}).then(function(d){if(r.ok){f.reset();show('Thank you! Your message has arrived. We will reply within one working day.','ok');}else{var e=(d&&d.errors&&d.errors.length)?' ('+d.errors.map(function(x){return x.message;}).join(', ')+')':(d&&d.error?' ('+d.error+')':' (HTTP '+r.status+')');show('Sorry, your message could not be sent. Please try again or email lukas@pd-ondemand.ch directly.'+e,'err');}});}).catch(function(){f.submit();}).then(function(){b.disabled=false;b.textContent=bl;});});})();
 })();
 
 /* Textmarker: setzt sich, sobald der Satz gelesen wird */
