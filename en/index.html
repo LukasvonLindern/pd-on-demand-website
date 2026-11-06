@@ -10,8 +10,6 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.pd-ondemand.ch/en/">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://www.pd-ondemand.ch/en/">
 <link rel="alternate" hreflang="de" href="https://www.pd-ondemand.ch/">
 <link rel="alternate" hreflang="en" href="https://www.pd-ondemand.ch/en/">
@@ -35,16 +33,34 @@
 ]}
 ]}
 </script>
+<meta name="theme-color" content="#0A47C2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://www.pd-ondemand.ch/og-image-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PD on Demand: Psychometric assessment. Independent. Online. Personal.">
+<meta name="twitter:image" content="https://www.pd-ondemand.ch/og-image-en.png">
 <style>
+/* Albert Sans (SIL OFL 1.1), lokal gehostet: keine Verbindung zu Font-Servern Dritter */
+@font-face{font-family:'Albert Sans';src:url('/fonts/AlbertSans-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Albert Sans';src:url('/fonts/AlbertSans-Italic-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
 :root{
-  --ink:#132623;--ink2:#1B332F;--slate:#4C5A56;--muted:#7C8A85;
-  --line:#DDE1DC;--sand:#F1F3EF;--white:#fff;
-  --amber:#17403F;--teal:#17403F;--plum:#2F5B52;--wa:#25D366;
-  --mark:#F2E14C;
-  --accent-l:#F1F3EF;      /* Akzent auf dunklem Grund */
+  /* Cobalt / Rust / Cream */
+  --cobalt:#0A47C2;--cobalt-d:#07368F;--cobalt-l:#E3EBFB;
+  --rust:#B23C0C;--rust-d:#8F2F08;--rust-l:#F8DCCB;
+  --cream:#FBF8EF;--cream-2:#F4EFE1;
+  --ink:#0E1630;--ink2:#0A1024;--slate:#363E52;--muted:#5A6174;
+  --line:#E6E0D0;--sand:var(--cream);--white:#fff;
+  /* Altnamen, damit bestehende Regeln weiter greifen */
+  --amber:var(--cobalt);--teal:var(--cobalt);--plum:var(--ink);--wa:#25D366;
+  --mark:var(--rust-l);
+  --accent-l:var(--cream);
 
-  --fd:Arial,Helvetica,sans-serif;--fb:Arial,Helvetica,sans-serif;--fm:Arial,Helvetica,sans-serif;--fs:Georgia,'Times New Roman',serif;
-  --max:1140px;--gut:clamp(20px,5vw,72px);--e:cubic-bezier(.22,1,.36,1);
+  --fd:'Albert Sans',Avenir,'Avenir Next','Segoe UI',Helvetica,Arial,sans-serif;
+  --fb:var(--fd);--fm:var(--fd);--fs:var(--fd);
+  --max:1180px;--gut:clamp(20px,5vw,72px);--e:cubic-bezier(.22,1,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -93,7 +109,7 @@ h1 i{font-style:normal;font-weight:600;color:var(--amber)}
 .btn-p{background:var(--ink);color:#fff}
 .btn-p:hover{background:var(--amber);transform:none}
 .btn-a{background:var(--amber);color:#fff}
-.btn-a:hover{background:#a9743a;transform:none}
+.btn-a:hover{background:var(--rust-d);transform:none}
 .btn-w{background:var(--wa);color:#0A2E17}
 .btn-w:hover{transform:none}
 .btn-o{border:1.5px solid var(--line);color:var(--ink);background:#fff}
@@ -298,10 +314,10 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--amber);b
 
 /* FOOTER */
 footer .lmark circle[stroke]{stroke:rgba(255,255,255,.9)}
-footer .lmark circle[fill]{fill:#F1F3EF}
+footer .lmark circle[fill]{fill:#2F6BE0}
 footer .lmark path{stroke:rgba(255,255,255,.9)}
 footer .ltext{color:#fff}
-footer .ltext i{color:#F1F3EF}
+footer .ltext i{color:var(--cream)}
 footer{background:var(--ink2);padding:52px 0 30px;border-top:1px solid rgba(255,255,255,.07)}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
 .fcol b{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;font-weight:500}
@@ -315,6 +331,222 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 .fab{position:fixed;right:20px;bottom:20px;z-index:190;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;transition:transform .25s var(--e)}
 .fab:hover{transform:scale(1.08)}
 
+
+/* =========================================================
+   REDESIGN 2026: Cobalt, Rust, Cream
+   ========================================================= */
+body{background:var(--cream);font-size:17.5px}
+::selection{background:var(--cobalt);color:#fff}
+nav{background:rgba(251,248,239,.86);border-bottom:1px solid rgba(14,22,48,.08)}
+.ltext{font-weight:800;letter-spacing:-.4px}
+.ltext i{font-style:italic;font-weight:500;color:var(--cobalt)}
+.nlinks a{color:var(--ink);white-space:nowrap}
+.nbtn{background:var(--rust)}
+.nbtn:hover{background:var(--rust-d)}
+.lang a[aria-current="true"]{background:var(--ink);color:#fff}
+.mob{background:var(--cream)}
+
+/* Eyebrows: Rust auf hell, Cream auf dunkel */
+.eyebrow{color:var(--rust);font-weight:700;font-size:12px;letter-spacing:1.6px}
+.eyebrow::before{background:var(--rust);width:28px;height:2px}
+
+/* Headlines: mehr Mut */
+h1{font-size:clamp(36px,7.8vw,100px);font-weight:800;line-height:.94;letter-spacing:-.045em;margin-bottom:0}
+h1 i{font-style:italic;font-weight:800;color:var(--cobalt)}
+h2{font-size:clamp(32px,4.9vw,58px);font-weight:800;line-height:1.02;letter-spacing:-.038em;margin-bottom:24px}
+h3,.jstep h4,.acc-b,.pt b,.pc-name,.fd-title{font-weight:700;letter-spacing:-.015em}
+.shead{max-width:780px}
+
+/* Buttons: Rust = Handlung */
+.btn{font-weight:700}
+.btn-p,.btn-a{background:var(--rust);color:#fff}
+.btn-p:hover,.btn-a:hover{background:var(--rust-d)}
+.btn-w{background:transparent;color:var(--ink);border:1.5px solid var(--ink);gap:9px}
+.btn-w::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--wa)}
+.btn-w:hover{background:var(--ink);color:#fff}
+.btn-o{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-o:hover{background:var(--ink);color:#fff}
+
+/* HERO */
+.hero{background:var(--cream);padding-top:150px;overflow:hidden;position:relative}
+.hg{grid-template-columns:1fr 1fr;grid-template-areas:"eb eb" "h1 h1" "txt card";row-gap:0;align-items:start;max-width:var(--max)}
+.hg .eyebrow{grid-area:eb}
+.hg h1{grid-area:h1;margin-bottom:clamp(36px,5vw,64px)}
+.hg .hbody{grid-area:txt;padding-top:8px}
+.hg .pwrap{grid-area:card}
+.hsub{font-size:clamp(17px,1.6vw,19.5px);color:var(--slate);max-width:500px}
+.pwrap{position:relative;z-index:1}
+.pwrap::before{content:'';position:absolute;z-index:-1;top:-36px;bottom:-60px;left:48px;right:-50vw;background:var(--cobalt);border-radius:28px 0 0 28px}
+.pwrap::after{content:'';position:absolute;z-index:-1;width:560px;height:560px;right:-240px;top:50%;transform:translateY(-50%);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%23FBF8EF' stroke-opacity='.18' stroke-width='5'/%3E%3Cpath d='M50 4v28M50 68v28' stroke='%23FBF8EF' stroke-opacity='.18' stroke-width='5'/%3E%3Ccircle cx='50' cy='50' r='15' fill='%23B23C0C' fill-opacity='.9'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* PROFILKARTE: Achse + Punkt, abgeleitet vom Logo */
+.pcard{border-radius:22px;box-shadow:0 2px 4px rgba(14,22,48,.06),0 30px 60px rgba(7,26,80,.28)}
+.pc-t{color:var(--muted);font-weight:700}
+.pc-live{color:var(--cobalt);font-weight:700}
+.pc-dot{background:var(--rust)}
+.pc-name{font-size:20px;margin:10px 0 24px}
+.bar-row{margin-bottom:20px}
+.bar-lab b{font-size:14px;font-weight:700}
+.bar-lab span{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.bar-lab .t-s{background:var(--cobalt-l);color:var(--cobalt-d)}
+.bar-lab .t-e{background:var(--rust-l);color:var(--rust-d)}
+.bar-tr{height:14px;background:none;overflow:visible;position:relative;border-radius:0}
+.bar-tr::before{content:'';position:absolute;left:0;right:0;top:6px;height:2px;background:var(--line);
+  background-image:linear-gradient(90deg,var(--line) 0 100%);}
+.bar-tr::after{content:'';position:absolute;left:0;right:0;top:3px;height:8px;
+  background:repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),#D6CFBC calc(10% - 1px) 10%);opacity:.9}
+.bar-fl{position:relative;z-index:1;height:2px;top:6px;border-radius:2px}
+.bar-fl::after{content:'';position:absolute;right:-7px;top:-6px;width:14px;height:14px;border-radius:50%;background:inherit;box-shadow:0 0 0 4px #fff}
+.pc-legend{display:flex;gap:18px;margin-top:4px;font-size:12px;font-weight:600;color:var(--muted)}
+.pc-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0}
+.pc-note{color:var(--slate);border-top-color:var(--line)}
+
+/* Marker */
+.hl{background-image:linear-gradient(var(--mark),var(--mark))}
+.dark .hl,.ai .hl{--mark:var(--cream)}
+
+/* PROBLEM */
+.problem{background:#fff}
+.pain-t{color:var(--rust);border-color:var(--rust-l);background:#FFF7F2;font-weight:700}
+.pain q{font-weight:600;font-style:italic;font-size:clamp(21px,2.3vw,26px);letter-spacing:-.015em;line-height:1.28}
+.pain p b{color:var(--cobalt)}
+
+/* FINDER: volle Cobalt-Flaeche */
+.finder{background:var(--cobalt)}
+.finder .slead{color:rgba(255,255,255,.82)}
+.fd-box{background:rgba(7,30,90,.32);border-color:rgba(255,255,255,.22)}
+.chip{border-color:rgba(255,255,255,.4);color:#fff}
+.chip:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.chip[aria-pressed="true"]{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.fd-desc{color:rgba(255,255,255,.85)}
+.finder .fd-m b{color:rgba(255,255,255,.75)}
+.fd-out{border-top-color:rgba(255,255,255,.22)}
+.finder .btn-a{background:var(--cream);color:var(--ink)}
+.finder .btn-a:hover{background:#fff}
+
+/* JOURNEY */
+.journey{background:var(--cream)}
+.jtab{background:transparent;border-color:rgba(14,22,48,.2);color:var(--ink)}
+.jtab[aria-selected="true"]{background:var(--cobalt);border-color:var(--cobalt)}
+.jline{width:3px}
+.jstep.on::before{box-shadow:0 0 0 6px rgba(10,71,194,.14)}
+.jstep::before{background:var(--cream)}
+.journey .jstep em{color:var(--rust);font-weight:700}
+.jstep h4{font-size:21px}
+.jstep{opacity:.28}
+
+/* PRODUCTS */
+.products{background:#fff}
+.prod{border-color:var(--line);background:#fff}
+.prod::before{height:5px;transform:scaleX(1)}
+.pnum{font-weight:700}
+.prod h3{font-size:23px}
+.prod:hover{background:var(--cream);border-color:var(--accent)}
+.prod:hover .btn-o{background:var(--accent);border-color:var(--accent);color:#fff}
+.pprice{font-size:22px;font-weight:800;letter-spacing:-.02em}
+
+/* REVIEWS */
+.reviews{background:var(--cream)}
+.rv-num{color:var(--cobalt);font-size:clamp(56px,9vw,112px);font-weight:800;letter-spacing:-.05em}
+.rv-of{font-weight:700;color:var(--ink);font-size:15px}
+.rv-top{border-color:rgba(14,22,48,.14)}
+.rv{border-color:var(--line)}
+.rv q{font-style:normal;font-weight:500;font-size:16.5px;line-height:1.58}
+.rv q::before{content:'\201E';display:block;font-size:56px;line-height:.6;height:26px;font-weight:800;color:var(--rust)}
+.rv-who{color:var(--muted)}
+.marq::before{background:linear-gradient(90deg,var(--cream),rgba(251,248,239,0))}
+.marq::after{background:linear-gradient(270deg,var(--cream),rgba(251,248,239,0))}
+.mq-lab{color:var(--muted)}
+.mq-t img{opacity:.85}
+
+/* PARTNERS */
+.partners{background:#fff}
+.pt-lab{color:var(--muted);font-weight:700}
+.pt:hover{border-color:var(--cobalt);background:var(--cream)}
+.pt b::after{color:var(--rust);font-weight:700}
+
+/* KI-HALTUNG: volle Rust-Flaeche */
+.ai{background:var(--rust)}
+.ai h2{color:#fff}
+.ai-in{max-width:820px}
+.ai-in p{color:rgba(255,255,255,.9)}
+.ai-in p:last-child{font-family:var(--fd);font-style:italic;font-weight:800;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em;line-height:1.05;color:var(--cream);margin-top:28px}
+
+/* FAQ */
+.faq{background:var(--cream)}
+.acc,.acc-i{border-color:rgba(14,22,48,.14)}
+.acc-b{font-size:19px}
+.acc-ic{border-color:rgba(14,22,48,.25);color:var(--ink)}
+.acc-b[aria-expanded="true"] .acc-ic{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+
+/* KONTAKT */
+.contact{background:var(--ink)}
+.cg .slead{color:rgba(255,255,255,.78)}
+.c-alt b{color:rgba(255,255,255,.7)}
+.contact .btn-w{color:#fff;border-color:rgba(255,255,255,.6)}
+.contact .btn-w:hover{background:#fff;color:var(--ink)}
+.contact .btn-a{background:var(--rust)}
+.contact .btn-a:hover{background:var(--rust-d)}
+.f-note{color:rgba(255,255,255,.66)}
+.f-ck label{color:rgba(255,255,255,.8)}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.5)}
+input:focus,textarea:focus,select:focus{border-color:var(--cream)}
+
+/* FOOTER */
+footer{background:var(--ink2)}
+.fcol b{color:rgba(255,255,255,.6)}
+.fcol a,.fcol p{color:rgba(255,255,255,.78)}
+.fbot{color:rgba(255,255,255,.55)}
+footer .ltext i{color:var(--cream)}
+
+.btn,.nbtn{white-space:nowrap}
+@media(max-width:1180px) and (min-width:901px){.nlinks{gap:16px}.nlinks a{font-size:14px}.nv{gap:16px}}
+/* FAB etwas dezenter */
+.fab{width:52px;height:52px;box-shadow:0 8px 24px rgba(14,22,48,.25)}
+
+:focus-visible{outline-color:var(--rust)}
+.dark :focus-visible,.ai :focus-visible,.contact :focus-visible,.finder :focus-visible{outline-color:var(--cream)}
+
+/* ===== V2: Cobalt als Markenfarbe ===== */
+h2 i{font-style:italic;font-weight:800;color:var(--cobalt)}
+.finder h2 i,.contact h2 i{color:var(--rust-l)}
+.ai h2 i{color:var(--cream)}
+.eyebrow{color:var(--cobalt)}
+.eyebrow::before{background:var(--cobalt)}
+.dark .eyebrow,.finder .eyebrow,.ai .eyebrow,.contact .eyebrow{color:var(--cream)}
+.dark .eyebrow::before,.finder .eyebrow::before,.ai .eyebrow::before,.contact .eyebrow::before{background:var(--cream)}
+.pain-t{color:var(--cobalt);border-color:#C9D7F5;background:var(--cobalt-l)}
+.journey .jstep em{color:var(--cobalt)}
+.pt b::after{color:var(--cobalt)}
+.rv q::before{color:var(--cobalt)}
+:focus-visible{outline-color:var(--cobalt)}
+.contact{background:var(--cobalt)}
+.cg .slead{color:rgba(255,255,255,.86)}
+.c-alt{border-top-color:rgba(255,255,255,.25)}
+.c-alt b{color:rgba(255,255,255,.8)}
+.contact form{background:rgba(7,30,90,.34);border-color:rgba(255,255,255,.24)}
+.contact label{color:#fff}
+.contact input,.contact textarea,.contact select{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.32)}
+.contact input:focus,.contact textarea:focus,.contact select:focus{background:rgba(255,255,255,.16);border-color:var(--cream)}
+.contact input::placeholder,.contact textarea::placeholder{color:rgba(255,255,255,.62)}
+.contact select option{background:var(--cobalt-d)}
+.contact .btn-p,.contact .btn-a{background:var(--cream);color:var(--ink)}
+.contact .btn-p:hover,.contact .btn-a:hover{background:#fff}
+.contact .btn-w{color:#fff;border-color:rgba(255,255,255,.75)}
+.contact .f-note,.contact .f-ck label{color:rgba(255,255,255,.84)}
+.contact a:hover{color:var(--rust-l)}
+.dark :focus-visible,.ai :focus-visible,.contact :focus-visible,.finder :focus-visible{outline-color:var(--cream)}
+
+@media(max-width:900px){
+  .hg{grid-template-columns:1fr;grid-template-areas:"eb" "h1" "txt" "card"}
+  .hg .pwrap{margin-top:56px}
+  .pwrap::before{left:-1000px;right:-1000px;top:-28px;bottom:-60px;border-radius:0}
+  .pwrap::after{width:360px;height:360px;right:-170px}
+  .hero{padding-bottom:60px}
+}
+@media(max-width:420px){h1{font-size:clamp(30px,8.6vw,40px)}}
+
 @media(max-width:900px){
   .hg,.pgrid,.pcards,.rv-grid,.pt-grid,.pt3,.cg,.f-row2{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr 1fr}
@@ -325,6 +557,9 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 }
 @media(max-width:560px){.fgrid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}.jstep{opacity:1}}
+
+/* Zitatzeichen ueber dem Text statt darauf */
+.rv q::before{content:'';display:block;width:30px;height:23px;margin:4px 0 16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 26'%3E%3Cpath fill='%230A47C2' d='M0 26V15C0 6.7 4.6 1.6 13 0l1.6 3.6C9.9 5.2 7.6 8 7.3 12H13v14H0zm19 0V15c0-8.3 4.6-13.4 13-15l1.6 3.6C28.9 5.2 26.6 8 26.3 12H32v14H19z'/%3E%3C/svg%3E") left top/contain no-repeat;font-size:0;line-height:0}
 </style>
 </head>
 <body>
@@ -333,9 +568,9 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="nv">
     <a href="./" class="logo" aria-label="PD on Demand, zur Startseite">
       <svg class="lmark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-        <circle cx="17" cy="17" r="16" stroke="#132623" stroke-width="1.6"/>
-        <circle cx="17" cy="17" r="5.5" fill="#17403F"/>
-        <path d="M17 1v9M17 24v9" stroke="#132623" stroke-width="1.6"/>
+        <circle cx="17" cy="17" r="16" stroke="#0E1630" stroke-width="1.8"/>
+        <circle cx="17" cy="17" r="5.5" fill="#0A47C2"/>
+        <path d="M17 1v9M17 24v9" stroke="#0E1630" stroke-width="1.8"/>
       </svg>
       <span class="ltext">PD <i>on Demand</i></span>
     </a>
@@ -360,27 +595,30 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 <!-- HERO -->
 <header class="hero">
   <div class="hg">
-    <div>
       <p class="eyebrow">Independent psychometric assessment</p>
       <h1>Psychometric assessment.<br><i>Independent.</i><br>Online. Personal.</h1>
+      <div class="hbody">
       <p class="hsub">We help HR leaders and managers develop the right people and make better decisions about them. We work with leading psychometric instruments and choose the one that fits your question.</p>
       <div class="hact">
         <a href="https://calendly.com/lukas-pd-ondemand/pd-on-demand-kennenlernen" class="btn btn-p" target="_blank" rel="noopener">Book an intro call</a>
         <a href="https://wa.me/41797052727" class="btn btn-w" target="_blank" rel="noopener">Ask on WhatsApp</a>
       </div>
-    </div>
+      </div>
+    <div class="pwrap">
     <div class="pcard" id="pcard">
       <div class="pc-top">
         <span class="pc-t">Sample profile</span>
         <span class="pc-live"><i class="pc-dot"></i>What a result looks like</span>
       </div>
       <p class="pc-name">Leader, 8 years of experience</p>
-      <div class="bar-row"><div class="bar-lab"><b>Decisiveness</b><span>strong</span></div><div class="bar-tr"><div class="bar-fl" data-w="86" style="background:var(--teal)"></div></div></div>
-      <div class="bar-row"><div class="bar-lab"><b>Delegating</b><span>development area</span></div><div class="bar-tr"><div class="bar-fl" data-w="34" style="background:var(--amber)"></div></div></div>
-      <div class="bar-row"><div class="bar-lab"><b>Giving feedback</b><span>pronounced</span></div><div class="bar-tr"><div class="bar-fl" data-w="72" style="background:var(--teal)"></div></div></div>
-      <div class="bar-row"><div class="bar-lab"><b>Addressing conflict</b><span>development area</span></div><div class="bar-tr"><div class="bar-fl" data-w="41" style="background:var(--amber)"></div></div></div>
-      <div class="bar-row"><div class="bar-lab"><b>Strategic thinking</b><span>strong</span></div><div class="bar-tr"><div class="bar-fl" data-w="79" style="background:var(--teal)"></div></div></div>
+      <div class="bar-row"><div class="bar-lab"><b>Decisiveness</b><span class="t-s">strong</span></div><div class="bar-tr"><div class="bar-fl" data-w="86" style="background:var(--teal)"></div></div></div>
+      <div class="bar-row"><div class="bar-lab"><b>Delegating</b><span class="t-e">development area</span></div><div class="bar-tr"><div class="bar-fl" data-w="34" style="background:var(--rust)"></div></div></div>
+      <div class="bar-row"><div class="bar-lab"><b>Giving feedback</b><span class="t-s">pronounced</span></div><div class="bar-tr"><div class="bar-fl" data-w="72" style="background:var(--teal)"></div></div></div>
+      <div class="bar-row"><div class="bar-lab"><b>Addressing conflict</b><span class="t-e">development area</span></div><div class="bar-tr"><div class="bar-fl" data-w="41" style="background:var(--rust)"></div></div></div>
+      <div class="bar-row"><div class="bar-lab"><b>Strategic thinking</b><span class="t-s">strong</span></div><div class="bar-tr"><div class="bar-fl" data-w="79" style="background:var(--teal)"></div></div></div>
+      <p class="pc-legend"><span><i style="background:var(--cobalt)"></i>Strength</span><span><i style="background:var(--rust)"></i>Development area</span></p>
       <p class="pc-note">In the debriefing, this becomes a conversation: <b class="hl" data-hl>Why is delegating difficult when decisiveness is high?</b> That is where development begins.</p>
+    </div>
     </div>
   </div>
 </header>
@@ -391,7 +629,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
     <div class="pgrid">
       <div class="shead">
         <p class="eyebrow">The starting point</p>
-        <h2>People development is usually well intended. It is rarely measurable.</h2>
+        <h2>People development is usually well intended. It is <i>rarely measurable.</i></h2>
         <p class="slead">Many companies invest in training and programmes without knowing where their people actually stand. Without that baseline there is no direction, and development comes down to chance.</p>
         <p class="slead" style="margin-top:16px">On top of that, most providers sell one instrument rather than a solution. These are the three sentences we hear most often in first conversations, and how we deal with them.</p>
       </div>
@@ -421,7 +659,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="wrap">
     <div class="shead">
       <p class="eyebrow">Assessment finder</p>
-      <h2>Which psychometric approach fits your question?</h2>
+      <h2>Which psychometric approach <i>fits your question?</i></h2>
       <p class="slead">Instead of a product catalogue, choose what you need help with. You get an initial view of the right approach and its starting price.</p>
     </div>
     <div class="fd-box">
@@ -453,7 +691,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="wrap">
     <div class="shead">
       <p class="eyebrow">The process</p>
-      <h2>The process: from the first conversation to the development plan.</h2>
+      <h2>The process: from the first conversation to the <i>development plan.</i></h2>
       <p class="slead">Every step has a purpose. And the effort stays minimal for you.</p>
     </div>
     <div class="jtabs" role="tablist" aria-label="Process nach Leistung">
@@ -470,7 +708,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="wrap">
     <div class="shead">
       <p class="eyebrow">What we do</p>
-      <h2>Our psychometric assessment services.</h2>
+      <h2>Our <i>psychometric assessment</i> services.</h2>
       <p class="slead">No standard package. We first understand what you need, recommend the approach that fits, and stay with you through the whole process.</p>
     </div>
     <div class="pcards">
@@ -481,7 +719,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
         <p class="pprice">from 590 EUR<small>per person, follow-up included</small></p>
         <a href="#kontakt" class="btn btn-o btn-sm">Discuss this service</a>
       </div>
-      <div class="prod" style="--accent:var(--amber)">
+      <div class="prod" style="--accent:var(--rust)">
         <span class="pnum">02 / Selection</span>
         <h3>Recruiting diagnostics for hiring decisions</h3>
         <p>Make hiring decisions on a clear, measurable basis. We support selection with a targeted assessment and a structured debriefing that gives you a sound basis for the decision.</p>
@@ -503,7 +741,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 <section class="reviews" id="referenzen">
   <div class="wrap">
     <p class="eyebrow">References</p>
-    <h2>What clients say about working with PD on Demand.</h2>
+    <h2>What clients say about working with <i>PD on Demand.</i></h2>
     <div class="rv-top">
       <div class="rv-score">
         <span class="rv-num" id="cnum" aria-label="96 percent">0%</span>
@@ -553,7 +791,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="wrap">
     <div class="shead">
       <p class="eyebrow">Network</p>
-      <h2>The approaches and partners we work with.</h2>
+      <h2>The approaches and partners <i>we work with.</i></h2>
       <p class="slead">We deliver programmes together with Cultural Hire and TrueWork. Both know our approaches and standards and work to the same principles, so quality holds whoever runs the training.</p>
     </div>
     <p class="pt-lab">Training and programme partners</p>
@@ -574,7 +812,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 <section class="ai dark">
   <div class="wrap ai-in">
     <p class="eyebrow">Our position</p>
-    <h2>Our position on AI.</h2>
+    <h2>Our position on <i>AI.</i></h2>
     <p>We use AI where it makes the process simpler: analysis, preparation and documentation. The conversation itself remains human. People develop better when they speak with someone who listens and asks useful questions.</p>
     <p>That will not change.</p>
   </div>
@@ -584,7 +822,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
 <section class="faq" id="faq">
   <div class="wrap">
     <p class="eyebrow">Frequently asked questions</p>
-    <h2>What HR leaders ask us most often.</h2>
+    <h2>What HR leaders <i>ask us most often.</i></h2>
     <div class="acc">
       <div class="acc-i"><button class="acc-b" aria-expanded="false">What happens to our employees’ data?<span class="acc-ic" aria-hidden="true">+</span></button><div class="acc-p"><div>The results belong to the person assessed. They receive the full report and decide what is shared. We process all data in line with applicable data protection requirements and retain it only as long as necessary. We share results only to the extent agreed in advance, never with uninvolved third parties. The providers used for scheduling and contact are listed in our privacy policy. We can provide a processing overview before a project starts if you need it for internal approval.</div></div></div>
       <div class="acc-i"><button class="acc-b" aria-expanded="false">Which approach fits our question?<span class="acc-ic" aria-hidden="true">+</span></button><div class="acc-p"><div>We decide that together in the first conversation. We are not tied to one provider and work with Harrison, PI Company and Hogan. Development and talent deployment call for different instruments than senior-level selection. If an approach is not right for your question, we will say so.</div></div></div>
@@ -602,7 +840,7 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
     <div class="cg">
       <div>
         <p class="eyebrow">Getting started</p>
-        <h2>Let us talk.</h2>
+        <h2>Let us <i>talk.</i></h2>
         <p class="slead">If you are unsure which approach fits your question, or simply want to understand what working together could look like, an introductory conversation is the best place to start. We listen, ask a few questions and give you an honest view. No obligation and no standard pitch.</p>
         <div class="c-alt">
           <b>Prefer to book directly</b>
@@ -653,9 +891,9 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
       <div class="fcol">
         <a href="./" class="logo" style="margin-bottom:16px">
           <svg class="lmark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-            <circle cx="17" cy="17" r="16" stroke="#fff" stroke-opacity=".5" stroke-width="1.6"/>
-            <circle cx="17" cy="17" r="5.5" fill="#F1F3EF"/>
-            <path d="M17 1v9M17 24v9" stroke="#fff" stroke-opacity=".5" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="16" stroke="#FBF8EF" stroke-opacity=".9" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="5.5" fill="#2F6BE0"/>
+            <path d="M17 1v9M17 24v9" stroke="#FBF8EF" stroke-opacity=".9" stroke-width="1.6"/>
           </svg>
           <span class="ltext" style="color:#fff">PD <i>on Demand</i></span>
         </a>

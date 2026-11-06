@@ -10,15 +10,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.pd-ondemand.ch">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://www.pd-ondemand.ch/ueber-uns.html">
 <link rel="alternate" hreflang="de" href="https://www.pd-ondemand.ch/">
 <link rel="alternate" hreflang="x-default" href="https://www.pd-ondemand.ch/">
 <link rel="alternate" hreflang="en" href="https://www.pd-ondemand.ch/en/">
 <meta property="og:locale" content="de_CH">
 <meta property="og:site_name" content="PD on Demand">
-<meta property="og:image" content="https://www.pd-ondemand.ch/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AboutPage","url":"https://www.pd-ondemand.ch/ueber-uns.html",
@@ -28,15 +25,32 @@
 "worksFor":{"@type":"Organization","name":"PD on Demand","url":"https://www.pd-ondemand.ch/"},
 "knowsAbout":["Arbeits- und Organisationspsychologie","Eignungsdiagnostik","Personalentwicklung","Coaching"]}}
 </script>
+<meta name="theme-color" content="#0A47C2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://www.pd-ondemand.ch/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PD on Demand: Personaldiagnostik. Unabhängig. Online. Persönlich.">
+<meta name="twitter:image" content="https://www.pd-ondemand.ch/og-image.png">
 <style>
-:root{
-  --ink:#132623;--ink2:#1B332F;--slate:#4C5A56;--muted:#7C8A85;
-  --line:#DDE1DC;--sand:#F1F3EF;--white:#fff;
-  --amber:#17403F;--teal:#17403F;--plum:#2F5B52;--wa:#25D366;
-  --mark:#F2E14C;
+/* Albert Sans (SIL OFL 1.1), lokal gehostet: keine Verbindung zu Font-Servern Dritter */
+@font-face{font-family:'Albert Sans';src:url('/fonts/AlbertSans-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Albert Sans';src:url('/fonts/AlbertSans-Italic-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
 
-  --fd:Arial,Helvetica,sans-serif;--fb:Arial,Helvetica,sans-serif;--fm:Arial,Helvetica,sans-serif;--fs:Georgia,'Times New Roman',serif;
-  --max:1140px;--gut:clamp(20px,5vw,72px);--e:cubic-bezier(.22,1,.36,1);
+:root{
+  /* Cobalt / Rust / Cream */
+  --cobalt:#0A47C2;--cobalt-d:#07368F;--cobalt-l:#E3EBFB;
+  --rust:#B23C0C;--rust-d:#8F2F08;--rust-l:#F8DCCB;
+  --cream:#FBF8EF;--cream-2:#F4EFE1;
+  --ink:#0E1630;--ink2:#0A1024;--slate:#363E52;--muted:#5A6174;
+  --line:#E6E0D0;--sand:var(--cream);--white:#fff;
+  --amber:var(--cobalt);--teal:var(--cobalt);--plum:var(--ink);--wa:#25D366;
+  --mark:var(--rust-l);--accent-l:var(--cream);
+  --fd:'Albert Sans',Avenir,'Avenir Next','Segoe UI',Helvetica,Arial,sans-serif;
+  --fb:var(--fd);--fm:var(--fd);--fs:var(--fd);
+  --max:1180px;--gut:clamp(20px,5vw,72px);--e:cubic-bezier(.22,1,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -377,6 +391,91 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   .fact:not(:first-child){padding-left:0}
   .qrow{grid-template-columns:1fr;gap:6px}
 }
+
+/* =========================================================
+   CI 2026: Cobalt, Rust, Cream (Unterseiten)
+   ========================================================= */
+body{background:var(--cream);font-size:17.5px}
+::selection{background:var(--cobalt);color:#fff}
+nav{background:rgba(251,248,239,.86);border-bottom:1px solid rgba(14,22,48,.08)}
+.ltext{font-weight:800;letter-spacing:-.4px}
+.ltext i{font-style:italic;font-weight:500;color:var(--cobalt)}
+.nlinks a{color:var(--ink);white-space:nowrap}
+.nlinks a:hover{color:var(--cobalt)}
+.nbtn{background:var(--rust)}
+.nbtn:hover{background:var(--rust-d);transform:none}
+.lang a[aria-current="true"]{background:var(--ink);color:#fff}
+.mob{background:var(--cream)}
+.eyebrow{color:var(--cobalt);font-weight:700;font-size:12px;letter-spacing:1.6px}
+.eyebrow::before,.eyebrow:before{background:var(--cobalt);width:28px;height:2px}
+h1{font-weight:800;letter-spacing:-.045em;line-height:.98}
+h2{font-weight:800;letter-spacing:-.035em;line-height:1.04}
+h3{font-weight:700;letter-spacing:-.015em}
+h1 i,h2 i{font-style:italic;font-weight:800;color:var(--cobalt)}
+.btn,.nbtn{white-space:nowrap;font-weight:700}
+.btn-p,.btn-a{background:var(--rust);color:#fff}
+.btn-p:hover,.btn-a:hover{background:var(--rust-d)}
+.btn-w{background:transparent;color:var(--ink);border:1.5px solid var(--ink);gap:9px}
+.btn-w::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--wa)}
+.btn-w:hover{background:var(--ink);color:#fff}
+.btn-o{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-o:hover{background:var(--ink);color:#fff}
+:focus-visible{outline-color:var(--cobalt)}
+footer{background:var(--ink2)}
+footer .lmark circle[fill]{fill:#2F6BE0}
+footer .lmark circle[stroke],footer .lmark path{stroke:rgba(251,248,239,.9)}
+footer .ltext,.fcol .logo .ltext{color:#fff}
+footer .ltext i,.fcol .logo .ltext i{color:var(--cream)}
+.fcol b{color:rgba(255,255,255,.6)}
+.fcol a,.fcol p{color:rgba(255,255,255,.78)}
+.fcol a:hover,.fbot a:hover{color:var(--rust-l)}
+.fbot{color:rgba(255,255,255,.55)}
+.fab{width:52px;height:52px;box-shadow:0 8px 24px rgba(14,22,48,.25)}
+
+/* Rechtstexte */
+.legal{background:var(--cream)}
+.legal h1{font-weight:800;font-size:clamp(38px,5.6vw,68px);letter-spacing:-.045em;line-height:.98;margin-bottom:18px}
+.legal h2{font-weight:800;font-size:clamp(23px,2.6vw,30px);letter-spacing:-.025em}
+.legal h3{font-weight:700}
+.legal .stamp{color:var(--cobalt);font-weight:700}
+.legal a:hover,.legal .toc a:hover,.back:hover{color:var(--cobalt)}
+.legal .note{border-left:3px solid var(--cobalt)}
+.legal .toc,.legal .box{border-color:var(--line)}
+.legal .toc b,.back{color:var(--muted);font-weight:700}
+
+/* Ueber uns (DE) */
+.ab{background:var(--cream)}
+.ab h1{font-size:clamp(40px,6.4vw,80px)}
+.ab-photo,.portrait{position:relative;isolation:isolate}
+.ab-photo::before,.portrait::before{content:'';position:absolute;z-index:-1;inset:28px -28px -28px 28px;background:var(--cobalt);border-radius:4px}
+.ab-cap,.caption{position:relative;margin-top:40px}
+.qual{background:#fff}
+.qtab{border-top-color:var(--cobalt)}
+.qrow dt{color:var(--cobalt);font-weight:700}
+.why-q,.quote{font-family:var(--fd);font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:1.28}
+.onefact,.facts{border-top-color:var(--cobalt)}
+.onefact b,.fact b{color:var(--cobalt);font-weight:800}
+.cta-band{background:var(--cobalt)!important}
+.cta-band h2 i{color:var(--rust-l)}
+.cta-band .btn-p,.cta-band .btn-a{background:var(--cream);color:var(--ink)}
+.cta-band .btn-p:hover,.cta-band .btn-a:hover{background:#fff}
+.cta-band .btn-w,.cta-band .btn-o{color:#fff;border-color:rgba(255,255,255,.75)}
+.cta-band .btn-w:hover,.cta-band .btn-o:hover{background:#fff;color:var(--ink)}
+.cta-band .eyebrow{color:var(--cream)}
+.cta-band .eyebrow::before{background:var(--cream)}
+
+/* About (EN) */
+.hero{background:var(--cream)}
+.row dt{color:var(--cobalt);font-weight:700}
+section.contact{background:var(--cobalt)}
+.contact h2 i{color:var(--rust-l)}
+.contact p{color:rgba(255,255,255,.86)}
+.contact .btn-p{background:var(--cream);color:var(--ink)}
+.contact .btn-p:hover{background:#fff}
+.contact .btn-o,.contact .btn-w{color:#fff;border-color:rgba(255,255,255,.75)}
+.contact .eyebrow{color:var(--cream)!important}
+.contact .eyebrow::before,.contact .eyebrow:before{background:var(--cream)}
+@media(max-width:940px){.ab-photo::before,.portrait::before{inset:20px -16px -20px 20px}}
 </style>
 </head>
 <body>
@@ -385,9 +484,9 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   <div class="nv">
     <a href="index.html" class="logo" aria-label="PD on Demand, zur Startseite">
       <svg class="lmark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-        <circle cx="17" cy="17" r="16" stroke="#132623" stroke-width="1.6"/>
-        <circle cx="17" cy="17" r="5.5" fill="#17403F"/>
-        <path d="M17 1v9M17 24v9" stroke="#132623" stroke-width="1.6"/>
+        <circle cx="17" cy="17" r="16" stroke="#0E1630" stroke-width="1.8"/>
+        <circle cx="17" cy="17" r="5.5" fill="#0A47C2"/>
+        <path d="M17 1v9M17 24v9" stroke="#0E1630" stroke-width="1.8"/>
       </svg>
       <span class="ltext">PD <i>on Demand</i></span>
     </a>
@@ -484,9 +583,9 @@ footer .fcol a.logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
       <div class="fcol">
         <a href="index.html" class="logo" style="margin-bottom:16px">
           <svg class="lmark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-            <circle cx="17" cy="17" r="16" stroke="#fff" stroke-opacity=".5" stroke-width="1.6"/>
-            <circle cx="17" cy="17" r="5.5" fill="#fff"/>
-            <path d="M17 1v9M17 24v9" stroke="#fff" stroke-opacity=".5" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="16" stroke="#FBF8EF" stroke-opacity=".9" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="5.5" fill="#2F6BE0"/>
+            <path d="M17 1v9M17 24v9" stroke="#FBF8EF" stroke-opacity=".9" stroke-width="1.6"/>
           </svg>
           <span class="ltext" style="color:#fff">PD <i>on Demand</i></span>
         </a>
