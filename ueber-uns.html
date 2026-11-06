@@ -477,6 +477,14 @@ section.contact{background:var(--cobalt)}
 .contact .eyebrow::before,.contact .eyebrow:before{background:var(--cream)}
 @media(max-width:940px){.ab-photo::before,.portrait::before{inset:20px -16px -20px 20px}}
 </style>
+<style id="photo-fix">
+.ab-photo,.portrait{background:var(--cobalt);border-radius:8px;padding:clamp(30px,4vw,46px) clamp(22px,3.5vw,40px) clamp(26px,3vw,34px);text-align:center;margin:0}
+.ab-photo::before,.portrait::before{display:none}
+.ab-photo img,.portrait img{width:300px;height:300px;max-width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%;border-radius:50%;margin:0 auto;border:6px solid var(--cream);box-shadow:0 18px 40px rgba(7,54,143,.35)}
+.ab-cap,.caption{margin-top:22px;color:rgba(251,248,239,.78);font-size:14px}
+.ab-cap b,.caption b{color:var(--cream);font-size:17px;margin-bottom:4px}
+@media(max-width:940px){.ab-photo,.portrait{max-width:420px}.ab-photo img,.portrait img{width:220px;height:220px}}
+</style>
 </head>
 <body>
 
