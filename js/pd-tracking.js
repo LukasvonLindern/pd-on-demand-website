@@ -3,8 +3,8 @@
    Solange ADS_ID nicht gesetzt ist, tut dieses Skript nichts (kein Banner, kein Tracking). */
 (function () {
   var CFG = {
-    ADS_ID: 'AW-REPLACE_ME',                    // z. B. AW-1234567890
-    CONV_BOOKING: 'REPLACE_BOOKING_LABEL',      // Conversion-Label "Kennenlernen gebucht"
+    ADS_ID: 'AW-18586232976',
+    CONV_BOOKING: '8lwdCMS5lLwdEJDRzZ5F',
     CONV_WHATSAPP: 'REPLACE_WHATSAPP_LABEL',    // Conversion-Label "WhatsApp-Klick"
     CALENDLY_HOST: 'calendly.com'
   };
